@@ -11,7 +11,7 @@ public class ClassPhotos {
             if (blueShirtHeights.get(i) > redShirtHeights.get(i)) {
                 blueRow++;
             }
-            if (redShirtHeights.get(i) > blueShirtHeights.get(i)) {
+            else {
                 redRow++;
             }
         }
