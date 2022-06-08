@@ -12,4 +12,18 @@ public class StringAutocorrect {
     //"youuuuu" with any number of "u" characters tacked onto the end
     //"u" at the beginning, middle, or end of a string, but NOT part of a word
     //"you" but NOT as part of another word like "young" or "Bayou"
+
+//    public static void stringCorrect (String msg) {
+//        String [] str = msg.split(" ");
+//
+//        for (int i = 0; i < str.length; i++) {
+//            if (str[i].toLowerCase().equals("you.") || str[i].toLowerCase().equals("u.")){
+//               str[i] = "your client";
+//            } else if (str[i].toLowerCase().equals("you") || str[i].toLowerCase().equals("u")) {
+//                str[i] = "your client";
+//            } else if () {
+//
+//            }
+//        }
+//    }
 }
