@@ -73,27 +73,3 @@ public class Task2 {
 
 }
 
-
-
-
-
-//    public static int arraypacking(int[] c){
-//        ArrayList<Integer> n = new ArrayList<>();
-//        for (int i : c) n.add(i);
-//        int count = 1;
-//        while (n.size() > 1){
-//            n = packer(n,count);
-//            count++;
-//        }
-//        return n.get(0);
-//    }
-//    public static ArrayList<Integer> packer(ArrayList<Integer> integers, int count){
-//        ArrayList<Integer> compiler = new ArrayList<>();
-//        if (count % 2 == 0){
-//            for (int i = 0; i < integers.size(); i += 2) compiler.add(integers.get(i) * integers.get(i + 1));
-//            return compiler;
-//        }else{
-//            for (int i = 0; i < integers.size(); i += 2) compiler.add(integers.get(i) + integers.get(i + 1));
-//            return compiler;
-//        }
-//    }
