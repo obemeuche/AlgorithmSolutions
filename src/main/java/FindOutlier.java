@@ -16,10 +16,20 @@ public class FindOutlier {
 //            [160, 3, 1719, 19, 11, 13, -21]
 //    Should return: 160 (the only even number)
 
-    public static int findPOutlier(ArrayList<Integer> Integers) {
+    public static int findPOutlier(ArrayList<Integer> integers) {
         ArrayList<Integer> oddN = new ArrayList<>();
         ArrayList<Integer> evenN = new ArrayList<>();
 
-        return 0;
+        for (int i = 0; i < integers.size(); i++) {
+            if(integers.get(i) % 2 == 0) {
+                evenN.add(integers.get(i));
+            }
+            else oddN.add(integers.get(i));
+        }
+
+        if (evenN.size() > oddN.size()) {
+            return oddN.get(0);
+        }
+        else  return evenN.get(0);
     }
 }
