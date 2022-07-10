@@ -53,7 +53,7 @@ The path ["NORTH", "WEST", "SOUTH", "EAST"] is not reducible. "NORTH" and "WEST"
 are not directly opposite of each other and can't become such. Hence the result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
      */
 
-    public String [] dirReduction (String [] arr){
+    public static String [] dirReduction(String[] arr){
         // Converting an array to an arraylist
         ArrayList<String> newArr = new ArrayList<>(Arrays.asList(arr));
 
@@ -81,5 +81,21 @@ are not directly opposite of each other and can't become such. Hence the result 
         }
         String [] dirArr = new String[newArr.size()];
         return newArr.toArray(dirArr);
+    }
+
+    public static void main(String[] args) {
+        String []arr = {"NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"};
+        String []arr2 = {"NORTH", "SOUTH", "EAST", "WEST"};
+        String []arr3 = {"NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"};
+        String []arr4 = {"NORTH", "WEST", "SOUTH", "EAST"};
+        System.out.println(Arrays.toString(dirReduction(arr)));
+        System.out.println(Arrays.toString(dirReduction(arr2)));
+        System.out.println(Arrays.toString(dirReduction(arr3)));
+        System.out.println(Arrays.toString(dirReduction(arr4)));
+//1. Arrays.toString in the case where u returned an array
+//2. List.of() is used to convert an array to a list
+//3. List is used to remove at any index or any element bt stack only removes from the top
+//4. When accessing element after current position. e.g (i+1) stop the loop at index before the end i.e  i < directionList.size() -1
+//5. You can reset ur array by setting i = -1 not i = 0
     }
 }
