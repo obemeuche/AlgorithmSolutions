@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class DirectionReduction {
     /*
@@ -20,6 +21,7 @@ In ["NORTH", "SOUTH", "EAST", "WEST"], the direction "NORTH" + "SOUTH" is going 
 What a waste of time! Better to do nothing. The path becomes ["EAST", "WEST"], now "EAST" and "WEST" annihilate each other,
 
 therefore, the final result is [] (nil in Clojure).
+
 In ["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"], "NORTH" and "SOUTH" are not directly opposite but they become directly
 
 opposite after the reduction of "EAST" and "WEST" so the whole path is reducible to ["WEST", "WEST"].
@@ -33,7 +35,6 @@ removed (W<->E or S<->N side by side).
 The Haskell version takes a list of directions with data Direction = North | East | West | South. The Clojure version returns nil
 
 when the path is reduced to nothing.
-
 
 Examples
 
@@ -52,7 +53,33 @@ The path ["NORTH", "WEST", "SOUTH", "EAST"] is not reducible. "NORTH" and "WEST"
 are not directly opposite of each other and can't become such. Hence the result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
      */
 
-//    public String [] dirReduction (String [] arr){
-//
-//    }
+    public String [] dirReduction (String [] arr){
+        // Converting an array to an arraylist
+        ArrayList<String> newArr = new ArrayList<>(Arrays.asList(arr));
+
+        for (int i = 0; i < newArr.size(); i++){
+            if (newArr.get(i).equals("NORTH") && newArr.get(i+1).equals("SOUTH")){
+                newArr.remove("NORTH");
+                newArr.remove("SOUTH");
+                i = -1;
+            }
+            else if (newArr.get(i).equals("SOUTH") && newArr.get(i+1).equals("NORTH")) {
+                newArr.remove("NORTH");
+                newArr.remove("SOUTH");
+                i = -1;
+            }
+            else if (newArr.get(i).equals("EAST") && newArr.get(i+1).equals("WEST")) {
+                newArr.remove("EAST");
+                newArr.remove("WEST");
+                i = -1;
+            }
+            else if (newArr.get(i).equals("WEST") && newArr.get(i+1).equals("EAST")) {
+                newArr.remove("EAST");
+                newArr.remove("WEST");
+                i = -1;
+            }
+        }
+        String [] dirArr = new String[newArr.size()];
+        return newArr.toArray(dirArr);
+    }
 }
