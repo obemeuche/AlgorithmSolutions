@@ -57,7 +57,7 @@ are not directly opposite of each other and can't become such. Hence the result 
         // Converting an array to an arraylist
         ArrayList<String> newArr = new ArrayList<>(Arrays.asList(arr));
 
-        for (int i = 0; i < newArr.size(); i++){
+        for (int i = 0; i < newArr.size() - 1; i++){
             if (newArr.get(i).equals("NORTH") && newArr.get(i+1).equals("SOUTH")){
                 newArr.remove("NORTH");
                 newArr.remove("SOUTH");
