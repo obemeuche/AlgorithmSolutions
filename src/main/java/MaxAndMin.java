@@ -20,4 +20,10 @@ public class MaxAndMin {
         }
         return max + min;
     }
+
+    public static void main(String[] args) {
+                int[] arr = {3,5,2,5,6};
+        System.out.println(maxAndMin(arr));
+        System.out.println(minAndMax(arr));
+    }
 }
