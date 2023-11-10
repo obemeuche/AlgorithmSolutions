@@ -39,6 +39,7 @@ public class LinearBinarySearch {
     }
 
     private static int binarySearch(int[] num, int target, int start, int end) {
+        // it is a type of searching algorithm which is more efficient
         // binary search has a time complexity of 0(log n)
 
         int steps = 0;
@@ -58,6 +59,7 @@ public class LinearBinarySearch {
     }
 
     private static int linearSearch(int[] num, int target) {
+        // it is a type of searching algorithm
         // linear search has a time complexity of 0(n)
 
         int steps = 0;
