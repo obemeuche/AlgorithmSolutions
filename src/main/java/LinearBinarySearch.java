@@ -9,8 +9,8 @@ public class LinearBinarySearch {
         int result1 = linearSearch(num, target);
         int result2 = binarySearch(num, target, start, end);
         int result3 = recursiveBinarySearch(num, target, start, end);
-        if(result3 != -1)
-            System.out.println("Found target at: " + result3);
+        if(result2 != -1)
+            System.out.println("Found target at: " + result2);
         else System.out.println("Target not found!");
 
 
@@ -39,6 +39,7 @@ public class LinearBinarySearch {
     }
 
     private static int binarySearch(int[] num, int target, int start, int end) {
+        // binary search has a time complexity of 0(log n)
 
         int steps = 0;
 
@@ -57,6 +58,8 @@ public class LinearBinarySearch {
     }
 
     private static int linearSearch(int[] num, int target) {
+        // linear search has a time complexity of 0(n)
+
         int steps = 0;
 
         for (int i = 0; i <= num.length-1; i++){
