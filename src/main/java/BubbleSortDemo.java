@@ -2,10 +2,7 @@ import java.util.Arrays;
 
 public class BubbleSortDemo {
     public static void main(String[] args) {
-        int[] nums = {3,2,1,5,7,0,9};
-
-//        Arrays.sort(nums);
-//        System.out.println("Sort: " + Arrays.toString(nums));
+        int[] nums = {3,2,1,5,7,0,9,4};
 
         int size = nums.length;
 
