@@ -10,6 +10,9 @@ public class InsertionSortDemo {
     }
 
     private static int[] insertionSort(int[] arr) {
+        // this is a type of sorting algorithm
+        // its time complexity is 0(n'2)
+
         int steps = 0;
 
         for(int i = 1; i < arr.length; i++){
