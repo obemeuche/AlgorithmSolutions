@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class QuickSortDemo {
     public static void main(String[] args) {
 
-        int[] arr = {9,5,4,2,0,3,1};
+        int[] arr = {9,51,4,22,0,39,1};
 
         int[] sortedArray = quickSort(arr, 0, arr.length - 1);
 
