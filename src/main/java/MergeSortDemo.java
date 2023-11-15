@@ -31,7 +31,7 @@ public class MergeSortDemo {
 
         for (int y =0; y < n2; y++)
         {
-            leftArray[y] = arr[m+1+y];
+            rightArray[y] = arr[m+1+y];
         }
     }
 
