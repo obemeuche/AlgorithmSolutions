@@ -23,6 +23,16 @@ public class MergeSortDemo {
 
         int[] leftArray = new int[n1];
         int[] rightArray = new int[n2];
+
+        for (int y =0; y < n1; y++)
+        {
+            leftArray[y] = arr[l-y];
+        }
+
+        for (int y =0; y < n2; y++)
+        {
+            leftArray[y] = arr[m+1+y];
+        }
     }
 
 
