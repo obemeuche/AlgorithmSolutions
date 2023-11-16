@@ -26,12 +26,45 @@ public class MergeSortDemo {
 
         for (int y =0; y < n1; y++)
         {
-            leftArray[y] = arr[l-y];
+            leftArray[y] = arr[l+y];
         }
 
         for (int y =0; y < n2; y++)
         {
             rightArray[y] = arr[m+1+y];
+        }
+
+        int i = 0;
+        int j = 0;
+        int k = l;
+
+        while(i<n1 && j<n2)
+        {
+            if(leftArray[i] <= rightArray[j])
+            {
+                arr[k] = leftArray[i];
+                i++;
+            }
+            else
+            {
+                arr[k] = rightArray[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i<n1)
+        {
+            arr[k] = leftArray[i];
+            i++;
+            k++;
+        }
+
+        while (j<n2)
+        {
+            arr[k] = rightArray[j];
+            j++;
+            k++;
         }
     }
 
