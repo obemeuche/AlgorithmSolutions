@@ -5,7 +5,6 @@ public class MergeSortDemo {
     private static int[] mergeSort(int[] arr, int l, int r)
     {
         //left is the starting index, right is the ending index.
-
         if(l < r)
         {
             //finding the middle index
@@ -17,7 +16,6 @@ public class MergeSortDemo {
 
             merge(arr, l, m, r);
         }
-
         return arr;
     }
 
@@ -36,7 +34,6 @@ public class MergeSortDemo {
 //        {
 //            leftArray[y] = arr[l+y];
 //        }
-
         System.out.println("LeftArray: " + Arrays.toString(leftArray));
 
         // copying elements in the second array
@@ -44,7 +41,6 @@ public class MergeSortDemo {
         {
             rightArray[y] = arr[m+1+y];
         }
-
         System.out.println("rightArray: " + Arrays.toString(rightArray));
 
         int i = 0;
@@ -82,7 +78,6 @@ public class MergeSortDemo {
         }
     }
 
-
     public static void main(String[] args) {
         int[] arr = {3,1111,17,2,94,5,8,49};
 
@@ -90,5 +85,4 @@ public class MergeSortDemo {
 
         System.out.println("Sorted Array: " + Arrays.toString(sortedArray));
     }
-
 }
