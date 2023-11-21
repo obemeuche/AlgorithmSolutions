@@ -18,8 +18,11 @@ public class SingleLinkedListDemo {
 
         int data = 5;
         insertToLinkedList(data);
-    }
+        insertToLinkedList(3);
+        insertToLinkedList(2);
 
+        viewList();
+    }
     private static void insertToLinkedList(int data) {
 
         Node node = new Node();
@@ -38,6 +41,17 @@ public class SingleLinkedListDemo {
             }
             n.next = node;
         }
+    }
+
+    private static void viewList() {
+
+        Node node = head;
+        while(node.next != null)
+        {
+            System.out.println(node.data);
+            node = node.next;
+        }
+        System.out.println(node.data);
     }
 }
 
