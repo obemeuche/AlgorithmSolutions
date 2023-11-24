@@ -21,16 +21,18 @@ public class SingleLinkedListDemo {
         insertToLinkedList(2);
         insertToLinkedList(10);
 
+        insertAtStart(20);
+
         viewList();
 
         Node node = head;
         Node reversedNode = reverseList(node);
 
-        while (reversedNode != null)
-        {
-            System.out.println(reversedNode.data);
-            reversedNode = reversedNode.next;
-        }
+//        while (reversedNode != null)
+//        {
+//            System.out.println(reversedNode.data);
+//            reversedNode = reversedNode.next;
+//        }
 
     }
 
@@ -59,10 +61,21 @@ public class SingleLinkedListDemo {
         Node node = head;
         while(node.next != null)
         {
-//            System.out.println(node.data);
+            System.out.println(node.data);
             node = node.next;
         }
-//        System.out.println(node.data);
+        System.out.println(node.data);
+    }
+
+    private static void insertAtStart(int data){
+        //inserting at the start of the linked list
+        Node node = new Node();
+        node.data = data;
+        node.next = null;
+        node.next = head;
+
+        head = node;
+
     }
 
     private static Node reverseList(Node node) {
