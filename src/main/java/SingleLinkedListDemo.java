@@ -75,7 +75,25 @@ public class SingleLinkedListDemo {
         node.next = head;
 
         head = node;
+    }
 
+    private static void insertAt(int data, int index){
+        //inserting at the start of the linked list
+        Node node = new Node();
+        node.data = data;
+        node.next = null;
+
+        if(index == 0){
+            insertAtStart(data);
+        }else {
+            Node n = head;
+            for(int i = 0; i<index-1; i++)
+            {
+                n = n.next;
+            }
+            node.next = n.next;
+            n.next = node;
+        }
     }
 
     private static Node reverseList(Node node) {
