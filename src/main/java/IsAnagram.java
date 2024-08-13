@@ -22,42 +22,41 @@ public class IsAnagram {
 //s and t consist of lowercase English letters.
 
 class Solution {
-    public boolean isAnagram(String s, String t) {
+    static boolean isAnagram(String s, String t) {
 
+        //convert to string array
         String [] newAr = s.split("");
         String [] newArr = t.split("");
 
+        //sort arrays
         Arrays.sort(newAr);
         Arrays.sort(newArr);
 
-        if (Arrays.equals(newAr,newArr)) {
-            return true;
-        }
-        else return false;
+        //use the Array.equals method to compare both arrays
+        return Arrays.equals(newAr, newArr);
     }
 }
 
         // OR //
 
     class Solution2 {
-        public boolean isAnagram(String s, String t) {
+        static boolean isAnagram2(String s, String t) {
 
+            //convert to character array
             char [] newAr = s.toCharArray();
             char [] newArr = t.toCharArray();
-
-            String sortedS = "";
-            String sortedT = "";
 
             Arrays.sort(newAr);
             Arrays.sort(newArr);
 
-            sortedS = (Arrays.toString(newAr));
-            sortedT = (Arrays.toString(newArr));
-
-            if (sortedS.contains(sortedT)) {
-                return true;
-            }
-            else return false;
+            return Arrays.equals(newAr, newArr);
         }
+    }
+
+    public static void main(String[] args) {
+        String s = "anagram";
+        String t = "nagaram";
+
+        System.out.println(Solution2.isAnagram2(s, t));
     }
 }

@@ -2,9 +2,9 @@ public class MaxAndMin {
     static int maxAndMin(int [] arr) {
         int min = arr[0];
         int max = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) max = arr[i];
-            if (arr[i] < min) min = arr[i];
+        for (int j : arr) {
+            if (j > max) max = j;
+            if (j < min) min = j;
         }
         return max + min;
     }
@@ -14,9 +14,9 @@ public class MaxAndMin {
     static int minAndMax(int [] arr){
         int min = Integer.MAX_VALUE; // min = 216761768
         int max = Integer.MIN_VALUE;  // max = -216761768
-        for (int i = 0; i < arr.length; i++){
-            min = Math.min(min, arr[i]);
-            max = Math.max(max, arr[i]);
+        for (int j : arr) {
+            min = Math.min(min, j);
+            max = Math.max(max, j);
         }
         return max + min;
     }

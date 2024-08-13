@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="AlgorithmExamples" />
         <module name="Week3Algorithm" />
-        <module name="AlgorithmSolutions" />
       </profile>
     </annotationProcessing>
   </component>

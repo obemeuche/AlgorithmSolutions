@@ -9,9 +9,9 @@ public class BuyAndSellProfit {
 //         Thurs -- Buy Or Sell at #3
 //         Fri  -- Buy Or Sell at #6  sell
 //         Sat  -- Buy Or Sell at #4
-//                System.out.println(buyAndSellProfit(new int[]{7,1,5,3,6,4}));
+                System.out.println(buyAndSellProfit(new int[]{7,1,5,3,6,4}));
 //                System.out.println(buyAndSellProfit(new int[]{7,6,4,3,1}));
-        System.out.println(maxArray(new int[]{-7,-6,-12,-3,-1}));
+//        System.out.println(maxArray(new int[]{-7,-6,-12,-3,-1}));
     }
     static int buyAndSellProfit(int [] prices){
         int maxProfit = 0; // 5
