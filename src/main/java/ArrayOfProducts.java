@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class ArrayOfProducts {
     //Task
@@ -8,11 +9,11 @@ public class ArrayOfProducts {
         int product = 1;
         List<Integer> newArr = new ArrayList<>();
         for (int i = 0; i < arr.size(); i++) {
-            for (int j = 0; j < arr.size(); j++) {
-                if (arr.get(i) == arr.get(j)) {
+            for (Integer integer : arr) {
+                if (Objects.equals(arr.get(i), integer)) {
                     continue;
                 }
-                product *= arr.get(j);
+                product *= integer;
             }
             newArr.add(product);
         }
@@ -21,7 +22,7 @@ public class ArrayOfProducts {
 
 
     public static void main(String[] args) {
-        System.out.println(ArrayOfProducts.arrayOfProducts(Arrays.asList(1,5,2,4)));
+        System.out.println(arrayOfProducts(Arrays.asList(1,5,2,4)));
     }
 }
 
